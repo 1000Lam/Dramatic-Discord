@@ -49,13 +49,13 @@
           <p class="raw">ค่าดิบ (ADC) <span id="raw">0</span> / 1023</p>
         </div>
         <div class="stages">
-          <button type="button" class="chip" data-v="15" data-state="dry" aria-pressed="false">แห้ง ต่ำกว่า 30%</button>
-          <button type="button" class="chip" data-v="55" data-state="ok" aria-pressed="false">พอดี 30–70%</button>
-          <button type="button" class="chip" data-v="90" data-state="wet" aria-pressed="false">ชื้นมาก มากกว่า 70%</button>
+          <button type="button" class="chip" data-v="10" data-state="stage0" aria-pressed="false">&lt; 20% แห้งมาก</button>
+          <button type="button" class="chip" data-v="30" data-state="stage1" aria-pressed="false">20–44% เริ่มแห้ง</button>
+          <button type="button" class="chip" data-v="60" data-state="stage2" aria-pressed="false">45–80% พอดี</button>
+          <button type="button" class="chip" data-v="90" data-state="stage3" aria-pressed="false">&gt; 80% ชื้นมากเกินไป</button>
         </div>
         <label for="slider" class="gauge-label" style="display:block;margin-bottom:6px">ลองเลื่อนเพื่อดูค่า</label>
         <input type="range" id="slider" min="0" max="100" value="55">
-        <p class="note">ภาพและตัวเลขนี้เป็นตัวอย่างประกอบ ให้แทนด้วยค่าและช่วงที่ได้จากโครงงานของคุณ</p>
       </div>
     </div>
     <section id="about">

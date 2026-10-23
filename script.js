@@ -5,19 +5,32 @@
   var status = document.getElementById('status');
   var gauge = document.getElementById('gauge');
 
-  // ตัวอย่างการแปลงค่า: ดินแห้งอ่านได้ประมาณ 1023 ดินเปียกอ่านได้ประมาณ 300
-  var RAW_DRY = 1023, RAW_WET = 300;
-
   function update() {
     var v = Number(slider.value);
-    var r = Math.round(RAW_DRY - (v / 100) * (RAW_DRY - RAW_WET));
-    var state = v < 30 ? 'dry' : v > 70 ? 'wet' : 'ok';
+    var r = Math.round((v / 100) * 1023);
+
+    var state = 'stage2';
+    if (v < 20) {
+      state = 'stage0';
+    } else if (v < 45) {
+      state = 'stage1';
+    } else if (v <= 80) {
+      state = 'stage2';
+    } else {
+      state = 'stage3';
+    }
+
     pct.textContent = v;
     raw.textContent = r;
     draw(v, state);
     gauge.setAttribute('data-state', state);
-    status.textContent = state === 'dry' ? 'แห้ง ควรรดน้ำ' : state === 'wet' ? 'ชื้นมาก' : 'ความชื้นพอดี';
+
+    if (state === 'stage0') status.textContent = 'แห้งมาก (Water me, PLZ!)';
+    else if (state === 'stage1') status.textContent = 'เริ่มแห้ง (Getting dry..)';
+    else if (state === 'stage2') status.textContent = 'พอดี (I\'m refreshed!)';
+    else status.textContent = 'ชื้นมากไป (Too much water!)';
   }
+
   var plant = document.getElementById('plant');
   var soil = document.getElementById('soil');
   var cracks = document.getElementById('cracks');
@@ -26,9 +39,10 @@
   var chips = document.querySelectorAll('.chip');
 
   var TEXT = {
-    dry: 'ใบเหี่ยวและห้อยลง สีใบซีดเป็นน้ำตาล ดินแห้งแตก ควรรดน้ำ',
-    ok: 'ใบตั้งชูขึ้น สีเขียวสด ลำต้นตรง ดินชื้นพอดี',
-    wet: 'ใบเหลืองและห้อยลง ดินแฉะมีน้ำขัง รากเสี่ยงเน่า ควรงดรดน้ำ'
+    stage0: '( X _ X ) Water me, PLZ! - ดินแห้งมาก ควรรดน้ำทันที',
+    stage1: '( . _ . ) Getting dry.. - ดินเริ่มแห้ง ความชื้นเริ่มลดลง',
+    stage2: '( O v O ) I\'m refreshed! - ความชื้นกำลังพอดี ต้นไม้สดชื่น',
+    stage3: '( > o < ) Too much water! - น้ำมากเกินไป ดินแฉะระวังรากเน่า'
   };
 
   function tok(name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }
@@ -50,8 +64,8 @@
   }
 
   function draw(v, state) {
-    var d = clamp((30 - v) / 30);
-    var w = clamp((v - 70) / 30);
+    var d = clamp((45 - v) / 45);
+    var w = clamp((v - 80) / 20);
     var droop = Math.max(d, w * 0.55);
 
     var ok = hex(tok('--leaf-ok'));

@@ -13,6 +13,7 @@
   --font-display: "Chakra Petch", "IBM Plex Sans Thai", system-ui, sans-serif;
   --font-body: "IBM Plex Sans Thai", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
@@ -118,8 +119,10 @@ h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(34px, 
 .gauge-label { font-family: var(--font-mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
 .pill { display: inline-block; font-size: 13px; font-weight: 600; padding: 2px 12px; border-radius: 999px; color: var(--state); border: 1px solid var(--state); }
 .gauge { --state: var(--ok); }
-.gauge[data-state="dry"] { --state: var(--dry); }
-.gauge[data-state="wet"] { --state: var(--wet); }
+.gauge[data-state="stage0"] { --state: var(--dry); }
+.gauge[data-state="stage1"] { --state: #D97706; }
+.gauge[data-state="stage2"] { --state: var(--ok); }
+.gauge[data-state="stage3"] { --state: var(--wet); }
 .reading { display: flex; align-items: baseline; gap: 6px; margin: 0; font-family: var(--font-display); }
 .reading output { font-size: 44px; font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums; }
 .reading span { font-size: 24px; color: var(--muted); }

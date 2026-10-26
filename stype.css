@@ -13,7 +13,6 @@
   --font-display: "Chakra Petch", "IBM Plex Sans Thai", system-ui, sans-serif;
   --font-body: "IBM Plex Sans Thai", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
-  
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
@@ -144,6 +143,11 @@ h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(34px, 
 input[type="range"] { width: 100%; accent-color: var(--accent); margin: 0; }
 .note { font-size: 12px; color: var(--muted); margin: 12px 0 0; }
 
+/* จำลองจอ LCD 16x2 และข้อความ Discord */
+.lcd { background: #1f5f3f; color: #d8ffd8; border: 3px solid #17241D; border-radius: 6px; padding: 10px 14px; width: max-content; max-width: 100%; margin: 0 auto 12px; box-shadow: inset 0 0 12px rgba(0,0,0,.35); }
+.lcd pre { margin: 0; font-family: var(--font-mono); font-size: 15px; line-height: 1.5; white-space: pre; overflow-x: auto; }
+.discord-line { font-size: 13px; color: var(--muted); text-align: center; margin: 0 0 16px; word-break: break-word; }
+
 /* รูปผู้จัดทำ */
 .maker { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 20px; }
 .maker_photo { width: 96px; aspect-ratio: 1; flex: none; border-radius: 50%; overflow: hidden; background: var(--surface); border: 1px solid var(--line); }
@@ -156,9 +160,20 @@ h2 { font-family: var(--font-display); font-weight: 600; font-size: clamp(24px, 
 .sec-body { min-width: 0; }
 .sec-body > p { margin: 0 0 16px; max-width: 65ch; color: var(--muted); }
 .sec-body > p:last-child { margin-bottom: 0; }
-.text {
-    padding-bottom:30px;
+
+/* แถวรูปภาพประกอบ เรียงซ้ายไปขวา */
+.gg {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
+.gg .image_item { flex: 1 1 0; max-width: 300px; }
+
+.text { padding-bottom: 30px; }
+
 /* equipment */
 .parts { list-style: none; margin: 0; padding: 0; }
 .parts li { display: grid; grid-template-columns: 340px minmax(0, 1fr); gap: 32px; align-items: start; padding-block: 20px; border-bottom: 1px solid var(--line); }
@@ -185,14 +200,17 @@ h2 { font-family: var(--font-display); font-weight: 600; font-size: clamp(24px, 
 .steps h3 { font-size: 18px; font-weight: 600; margin: 8px 0 4px; }
 .steps p { margin: 0; color: var(--muted); max-width: 62ch; }
 
+/* ดาวน์โหลดโค้ด */
+.btn { display: inline-block; background: var(--accent); color: var(--accent-ink); padding: 10px 22px; border-radius: 8px; font-weight: 600; text-decoration: none; margin: 8px 0 16px; }
+.btn:hover { filter: brightness(1.1); }
+.code-notes { color: var(--muted); padding-left: 20px; margin: 0; }
+.code-notes code { font-family: var(--font-mono); font-size: 13px; color: var(--fg); }
+
 /* benefits */
 .benefits { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 40px; }
 .benefits h3 { font-size: 18px; font-weight: 600; margin: 0 0 6px; color: var(--fg); }
 .benefits h3::before { content: ""; display: block; width: 28px; height: 3px; background: var(--accent); margin-bottom: 12px; }
 .benefits p { margin: 0; color: var(--muted); }
-
-
-
 
 .image-user img {
   display: block;
@@ -203,17 +221,6 @@ h2 { font-family: var(--font-display); font-weight: 600; font-size: clamp(24px, 
   border: 2px solid #10181470;
   border-radius: 5px;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 /* footer */
 footer { border-top: 1px solid var(--line); padding-top: 28px; display: grid; gap: 28px; font-size: 14px; color: var(--muted); }
@@ -239,6 +246,7 @@ footer p { margin: 0; }
   .parts .qty { grid-column: 1; text-align: left; }
   .benefits { grid-template-columns: minmax(0, 1fr); }
   .reading output { font-size: 38px; }
+  .lcd pre { font-size: 13px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

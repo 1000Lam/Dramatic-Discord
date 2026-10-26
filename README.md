@@ -6,6 +6,7 @@ https://1000lam.github.io/Dramatic-Discord/
 
 # Project Video
 
+# A1 Poster
 <img alt="Poster" src="image/poster.png" width="500" style="height: auto;"/>
 
 ## Contributors

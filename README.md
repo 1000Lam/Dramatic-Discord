@@ -1,6 +1,11 @@
 # Dramatic-Discord
 A project about plants with dramatic expressions and Discord webhook integration for convenience.
 
+# Project Website
+https://1000lam.github.io/Dramatic-Discord/
+
+# Project Video
+
 ## Contributors
 
 | ID       | Name                                  | Sub Topic                      | Image                                                                             |

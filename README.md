@@ -10,9 +10,10 @@ https://1000lam.github.io/Dramatic-Discord/
 <img alt="Poster" src="image/poster.png" width="500" style="height: auto;"/>
 
 ## Contributors
+| รหัสนักศึกษา       | ชื่อ-นามสกุล                                  | หน้าที่รับผิดชอบ      | ภาพ                                        |
+|----------|---------------------------------------|----------------|-----------------------------------------------------------------|
+| 68070044 | นายณัฐพล นินนาท (แลม)                 | • Discord Webhook<br>• ตัดต่อคลิปนำเสนอ             | <img alt="Lam" height="150" src="image/lam.jpg" width="150"/>   |
+| 68070051 | นายทักษพงศ์ ใจยา (บีม)                 | • เขียนโค้ด (Coding)<br>• ออกแบบและต่อวงจร             | <img alt="Beam" height="150" src="image/beam.jpg" width="150"/> |
+| 68070071 | นายธีรเมธ ปักโคทานัง (บอย)             | • ออกแบบ Poster<br>• ทำโครงสร้างชิ้นงาน<br>• พัฒนาเว็บไซต์             | <img alt="Boy" height="150" src="image/boy.jpg" width="150"/>   |
 
-| ID       | Name                                  | Sub Topic      | Image                                                                                                   |
-|----------|---------------------------------------|----------------|---------------------------------------------------------------------------------------------------------|
-| 68070044 | นายณัฐพล นินนาท (แลม)                  | ??             | <img alt="Lam" height="150" width="150" src="image/lam.jpg" style="object-fit: cover; aspect-ratio: 1/1;"/>   |
-| 68070051 | นายทักษพงศ์ ใจยา (บีม)                  | ??             | <img alt="Beam" height="150" width="150" src="image/beam.png" style="object-fit: cover; aspect-ratio: 1/1;"/> |
-| 68070071 | นายธีรเมธ ปักโคทานัง (บอย)              | ??             | <img alt="Boy" height="150" width="150" src="image/boy.jpg" style="object-fit: cover; aspect-ratio: 1/1;"/>   |
+

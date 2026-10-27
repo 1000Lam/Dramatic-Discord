@@ -5,6 +5,7 @@ A project about plants with dramatic expressions and Discord webhook integration
 https://1000lam.github.io/Dramatic-Discord/
 
 # Project Video
+https://youtu.be/t8BT2kzqiPA
 
 # A1 Poster
 <img alt="Poster" src="image/poster.png" width="500" style="height: auto;"/>

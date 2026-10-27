@@ -11,8 +11,8 @@ https://1000lam.github.io/Dramatic-Discord/
 
 ## Contributors
 
-| ID       | Name                                  | Sub Topic      | Image                                                           |
-|----------|---------------------------------------|----------------|-----------------------------------------------------------------|
-| 68070044 | นายณัฐพล นินนาท (แลม)                 | ??             | <img alt="Lam" height="150" src="image/lam.jpg" width="150"/>   |
-| 68070051 | นายทักษพงศ์ ใจยา (บีม)                 | ??             | <img alt="Beam" height="150" src="image/beam.png" width="150"/> |
-| 68070071 | นายธีรเมธ ปักโคทานัง (บอย)             | ??             | <img alt="Boy" height="150" src="image/boy.jpg" width="150"/>   |
+| ID       | Name                                  | Sub Topic      | Image                                                                                                   |
+|----------|---------------------------------------|----------------|---------------------------------------------------------------------------------------------------------|
+| 68070044 | นายณัฐพล นินนาท (แลม)                  | ??             | <img alt="Lam" height="150" width="150" src="image/lam.jpg" style="object-fit: cover; aspect-ratio: 1/1;"/>   |
+| 68070051 | นายทักษพงศ์ ใจยา (บีม)                  | ??             | <img alt="Beam" height="150" width="150" src="image/beam.png" style="object-fit: cover; aspect-ratio: 1/1;"/> |
+| 68070071 | นายธีรเมธ ปักโคทานัง (บอย)              | ??             | <img alt="Boy" height="150" width="150" src="image/boy.jpg" style="object-fit: cover; aspect-ratio: 1/1;"/>   |
